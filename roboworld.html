@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS shadow effect</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+        .container{
+            margin: 5px;
+            background-color: beige;
+            height: 100vh;
+            /* border:3px solid black; */
+            /* height: 330px; */
+        }
+        .box{
+            padding:5px;
+            outline: 2px solid black;
+        }
+        h2{
+            padding: 5px;
+        }
+        
+        .image{
+            grid-area: image;
+            border:2px solid black;
+            /* object-fit: contain;
+            height: 100%;
+            width: 100%; */
+        }
+        #logo{
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+        }
+        /* .heading h2{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        } */
+        .heading{
+            grid-area: heading;
+            border:2px solid black;
+        }
+        .content{
+            grid-area: content;
+            border:2px solid black;
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width:618px) {
+            .box{
+                /* width: 330px; */
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media (min-width:619px){
+                .box{
+                /* width: 330px; */
+                display: grid;
+                gap:1rem;
+                grid-template-areas: 
+                "image heading"
+                "image content"
+                ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="image" >
+                <img id ="logo" src="" alt="the robot will load">
+            </div>
+            <div class="heading">
+                <h2>Welcome to Robot World</h2>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est numquam, non obcaecati eos maxime, itaque modi qui blanditiis neque, cupiditate accusamus libero cumque porro ipsam autem aperiam dignissimos aspernatur maiores officiis. Quisquam aspernatur nesciunt quasi perferendis. Ipsa est, inventore nostrum vero autem minima reprehenderit necessitatibus dolorum quidem assumenda, omnis laudantium quaerat repudiandae amet iure consequuntur ipsam!</p>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var RandomNumber  = Math.floor(Math.random()*10) + 1
+        document.getElementById("logo").src = "https://robohash.org/random-logo" + RandomNumber + ".png"
+    </script>
+</body>
+</html>
