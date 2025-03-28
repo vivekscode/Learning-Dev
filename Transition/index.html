@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0;
+            padding: 0; */
+            box-sizing: border-box;
+        }
+        .box{
+            display: flex;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(133, 231, 199);
+            border: 2px solid black;
+            border-radius: 20%;
+            box-shadow: 0px 0px 3px 3px;
+            justify-content: center;
+            align-items: center;
+
+            /* transition code */
+            transition:all 2s;
+            
+            
+        }
+        .text{
+           font-size: 1.8rem;
+        }
+        .box:hover{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="text">
+            Hover to see the trans
+        </div>
+    </div>
+</body>
+</html>
